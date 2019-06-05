@@ -23,6 +23,7 @@ $factory->define(User::class, function (Faker $faker) {
         'name' => $faker->name,
         'email' => $faker->unique()->safeEmail,
         'email_verified_at' => now(),
+        'activated'=>true,
         'password' => '$2y$10$OmUEq57Nbv8MVlV9Ht2wwOoOCnL8V2hHVkJE/DH40KilmHy3CIxSm', // password
         'remember_token' => Str::random(10),
         'created_at'=>$date_time,
