@@ -50,4 +50,9 @@ class User extends Authenticatable
             $user->activation_token = Str::random(10);
         });
     }
+
+    public function statues()
+    {
+        return $this->hasMany(Status::class);
+    }
 }
